@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rupom Paul | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --primary:#2563eb;
+      --dark:#0f172a;
+      --light:#f8fafc;
+      --gray:#64748b;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+    body{background:var(--light);color:var(--dark)}
+    a{text-decoration:none;color:inherit}
+
+    /* HEADER */
+    header{
+      position:fixed;
+      top:0;left:0;width:100%;
+      background:white;
+      box-shadow:0 2px 10px rgba(0,0,0,.08);
+      z-index:1000;
+    }
+    .nav{
+      max-width:1100px;margin:auto;
+      display:flex;align-items:center;justify-content:space-between;
+      padding:18px 20px;
+    }
+    .logo{font-weight:700;font-size:20px;color:var(--primary)}
+    nav ul{display:flex;gap:25px;list-style:none}
+    nav ul li a{font-weight:500;color:var(--dark)}
+    nav ul li a:hover{color:var(--primary)}
+    .menu{display:none;font-size:24px;cursor:pointer}
+
+    /* HERO */
+    .hero{
+      padding-top:120px;
+      min-height:90vh;
+      display:flex;align-items:center;justify-content:center;
+      text-align:center;
+    }
+    .hero h1{font-size:40px;margin-bottom:10px}
+    .hero span{color:var(--primary)}
+    .hero p{color:var(--gray);max-width:600px;margin:15px auto}
+    .btn{
+      display:inline-block;margin-top:20px;padding:12px 22px;
+      background:var(--primary);color:white;border-radius:8px;
+      transition:.3s
+    }
+    .btn:hover{background:#1d4ed8}
+
+    /* SECTION */
+    section{padding:80px 20px}
+    .container{max-width:1100px;margin:auto}
+    .section-title{text-align:center;margin-bottom:40px}
+    .section-title h2{font-size:30px}
+
+    /* ABOUT */
+    .about p{color:var(--gray);text-align:center;line-height:1.7}
+
+    /* SKILLS */
+    .skills-grid{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:20px
+    }
+    .skill{
+      background:white;padding:20px;border-radius:12px;
+      box-shadow:0 5px 15px rgba(0,0,0,.05);
+      text-align:center;font-weight:500
+    }
+
+    /* PROJECTS */
+    .projects-grid{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:25px
+    }
+    .project{
+      background:white;border-radius:14px;overflow:hidden;
+      box-shadow:0 10px 20px rgba(0,0,0,.06);
+      transition:.3s
+    }
+    .project:hover{transform:translateY(-6px)}
+    .project img{width:100%;height:160px;object-fit:cover}
+    .project-content{padding:18px}
+    .project-content h3{margin-bottom:8px}
+    .project-content p{color:var(--gray);font-size:14px}
+
+    /* CONTACT */
+    .contact form{max-width:500px;margin:auto}
+    .contact input,.contact textarea{
+      width:100%;padding:12px;margin:10px 0;border-radius:8px;
+      border:1px solid #cbd5e1;font-size:14px
+    }
+    .contact button{width:100%;border:none;cursor:pointer}
+
+    /* FOOTER */
+    footer{
+      background:var(--dark);color:white;text-align:center;padding:25px 10px
+    }
+
+    /* MOBILE */
+    @media(max-width:768px){
+      nav ul{display:none;position:absolute;top:70px;right:20px;background:white;padding:15px;border-radius:10px;flex-direction:column;box-shadow:0 10px 20px rgba(0,0,0,.1)}
+      nav ul.show{display:flex}
+      .menu{display:block}
+      .hero h1{font-size:30px}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">Rupom Paul</div>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="menu" id="menu">☰</div>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div>
+    <h1>Hello, I'm <span>Rupom Paul</span></h1>
+    <h3>PHP / Laravel Developer</h3>
+    <p>I am a passionate PHP Laravel Developer with hands-on experience in building dynamic and database-driven web applications. I have worked with authentication systems, CRUD operations and RESTful APIs using Laravel and MySQL. I enjoy solving real-world problems through clean and structured backend development and I am currently seeking a Junior Laravel Developer or Internship opportunity to grow professionally.
+</p>
+    <a href="#projects" class="btn">View My Work</a>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="section-title"><h2>About Me</h2></div>
+    <div class="about">
+      <p>I am a dedicated beginner PHP Laravel Developer focused on backend web application development. I work with Laravel framework, PHP, and MySQL to create functional web systems. I have practical experience building authentication systems, user management features, and CRUD-based applications such as management systems and web dashboards.<br>
+      I am continuously improving my understanding of application logic, database relationships, and clean coding practices. My goal is to join a company as a Junior Laravel Developer or Intern where I can work on real projects, gain industry experience, and grow as a professional developer.</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container">
+    <div class="section-title"><h2>Skills</h2></div>
+    <div class="skills-grid">
+
+      <div class="skill">PHP</div>
+      <div class="skill">Laravel Framework</div>
+      <div class="skill">MVC Architecture</div>
+      <div class="skill">Authentication & CRUD</div>
+      <div class="skill">MySQL & Eloquent ORM</div>
+      <div class="skill">Git & GitHub</div>
+      <div class="skill">Migration & Seeders</div>
+      <div class="skill">Rest API</div>
+      <div class="skill">Composer</div>
+      <div class="skill">Wampserver/XAMPP</div>
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Bootstrap</div>
+
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <div class="section-title"><h2>Projects</h2></div>
+    <div class="projects-grid">
+
+      <div class="project">
+        <img src="https://picsum.photos/400/200?1">
+        <div class="project-content">
+          <h3>Hospital Management UI</h3>
+          <p>Medical EMR interface design created using HTML, CSS and JavaScript.</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="https://picsum.photos/400/200?2">
+        <div class="project-content">
+          <h3>Portfolio Website</h3>
+          <p>A responsive personal portfolio website showcasing skills and projects.</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="https://picsum.photos/400/200?3">
+        <div class="project-content">
+          <h3>Landing Page</h3>
+          <p>Modern business landing page with responsive layout and clean UI.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container contact">
+    <div class="section-title"><h2>Contact Me</h2></div>
+    <form onsubmit="sendMsg(event)">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button class="btn">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Rupom Paul | All Rights Reserved</p>
+</footer>
+
+<script>
+  const menu = document.getElementById('menu');
+  const navLinks = document.getElementById('nav-links');
+  menu.onclick = ()=> navLinks.classList.toggle('show');
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+    anchor.addEventListener('click',function(e){
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+      navLinks.classList.remove('show');
+    });
+  });
+
+  function sendMsg(e){
+    e.preventDefault();
+    alert('Message sent! (Demo only — connect with backend or EmailJS later)');
+  }
+</script>
+
+</body>
+</html>
+
+
+
